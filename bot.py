@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 
-# Membuat bot dengan prefix "/"
+# Membuat bot dengan prefix "/" nOte : Bisa custom prefix :3
 bot = commands.Bot(command_prefix="/")
 
 @bot.event
@@ -10,10 +10,10 @@ async def on_ready():
 
 @bot.command()
 async def myping(ctx):
-    # Menghitung ping bot ke server Discord
+    # Menghitung ping 
     latency = round(bot.latency * 1000)  # Dalam milidetik
 
-    # Membuat pesan embed dengan custom warna kontol
+    # Membuat  mssg embed dgn custom warna kontol note : Bebas mau warna apa SU
     embed = discord.Embed(
         title="Your Ping:",
         description=f"{latency} ms",
@@ -23,5 +23,5 @@ async def myping(ctx):
     # Mengirim pesan embed ke channel yang sama dengan perintah
     await ctx.send(embed=embed)
 
-# Ganti "YOUR_BOT_TOKEN" dengan token bot Anda
+# Ganti "YOUR_TOKEN" dengan token bot KOE SU
 bot.run("YOUR_TOKEN")
